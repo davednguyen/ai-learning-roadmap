@@ -22,3 +22,24 @@ print(x, xs)
 nums = range(5)
 print(nums)
 print(nums[2:4])  #get a slice from index 2 to 4 (exclusive)
+print(nums[2:])  #get a slice from index 2 to the end
+print(nums[:2])  #get a slice from the start to index 2 (exclusive)
+print(list(nums))
+print(list(nums)[2:4])
+print(list(nums)[2:])
+print(list(nums)[:2])
+print(list(nums)[:])
+print(list(nums)[:-1])  #every other element
+print(list(nums)[1::2])  #every other element starting at index 1
+print(list(nums)[::2])  #every other element starting at index 0
+#Assign a new sublist to a slice
+new_nums = [i for i in nums]
+print(new_nums)
+new_nums[2:4] = [8, 9]
+print(new_nums)
+#### Loops
+animals = ['cat', 'dog', 'monkey']
+for animal in animals:
+  print(animal)
+for idx, animal in enumerate(animals):
+  print('#%d: %s' % (idx + 1, animal))
