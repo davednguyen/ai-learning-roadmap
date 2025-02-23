@@ -43,3 +43,19 @@ for animal in animals:
   print(animal)
 for idx, animal in enumerate(animals):
   print('#%d: %s' % (idx + 1, animal))
+  #### List comprehensions:
+  ## When programming, frequently we want to transform one type of data into another. As a simple example, consider the following code that computes square numbers:
+  nums = [0,1,2,3,4]
+  print(nums)
+  squares = []
+  for x in nums:
+    squares.append(x**2)
+print(squares)
+### make this code simpler using a list comprehension:
+nums = [0,2,3,4,5]
+squares = [x**2 for x in nums]
+print(squares)
+## list conprehensions can also contain conditions:
+nums = [0,1,2,3,4]
+even_squares = [x**2 for x in nums if x%2 ==0]
+print(even_squares)
