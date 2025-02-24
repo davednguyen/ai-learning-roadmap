@@ -59,3 +59,10 @@ print(squares)
 nums = [0,1,2,3,4]
 even_squares = [x**2 for x in nums if x%2 ==0]
 print(even_squares)
+##### Dictionaries
+## A dictionary stores (key, value) pairs, similar to a `Map` in Java or an object in Javascript. You can use it like this:
+d = {'cat':'cute', 'dog':'furry'}
+print(d['cat']) #Get an entry from a dictionary; prints "cute"
+print('cat' in d) #Check if a dictionay has a given key; print "True"
+d['fish'] = 'wet' #set an entry in dictionary
+print(d['fish'])
