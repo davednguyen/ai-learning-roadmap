@@ -66,3 +66,20 @@ print(d['cat']) #Get an entry from a dictionary; prints "cute"
 print('cat' in d) #Check if a dictionay has a given key; print "True"
 d['fish'] = 'wet' #set an entry in dictionary
 print(d['fish'])
+# Get an element with a default; prints "N/A"
+#print(d['monkey'])
+print(d.get('monkey', 'N/A')) # "fish" is no longer a key; prints "N/A"
+#It is easy to iterate over the keys in a dictionary:
+d = {'person':2, 'cat':4, 'spider':8}
+for animal in d:
+  legs = d[animal]
+  print('A %s has %d legs' % (animal, legs))
+#If you want access to keys and their corresponding values, use the iteritems method:
+#dict.iteritems() will in Python 3
+for animal, legs in d.items():
+  print('A %s has %d legs' % (animal, legs))
+
+#Dictionary comprehensions: These are similar to list comprehensions, but allow you to easily construct dictionaries. For example:
+nums = [0,1,2,3,4]
+even_num_to_square = {x:x **2 for x in nums if x%2 ==0}
+print(even_num_to_square)
